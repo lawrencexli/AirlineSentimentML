@@ -4,6 +4,12 @@ Developed by Lawrence Xiaohua Li
 
 Email: lawrence.lixiaohua@gmail.com
 
+## Video demo
+
+Check out the demo.mp4 in the main repository or click the link below: 
+
+https://www.youtube.com/watch?v=Ryflhwq2QzY
+
 ## Library Used
 
 `nltk`, `pickle`, `fastapi`, `pydantic`
