@@ -1,0 +1,61 @@
+swagger: "2.0"
+info:
+  description: "This is an airline sentiment analysis API developed using fast API and nltk library"
+  version: "0.0.1"
+  title: "Airline Sentiment Analysis"
+  contact:
+    email: "lawrencexli2@gmail.com"
+
+
+paths:
+  /analysis/:
+    post:
+      summary: "Send a tweet message to server for sentiment analysis"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Tweet message that needs to be sent"
+        required: true
+        schema:
+          $ref: "#/definitions/Tweet"
+      responses:
+        "200":
+          description: "Successful analysis"
+          schema:
+            $ref: "#/definitions/APIResponse"
+        "422":
+          description: "Invalid JSON supplied. Unprocessable"
+            
+  /:
+    get:
+      summary: "Returns a main html page"
+      responses:
+        "200":
+          description: "Successful operation, OK"
+
+definitions:
+  APIResponse:
+    type: "object"
+    properties:
+      msgReceived:
+        type: "string"
+      result:
+        type: "string"
+      
+  Tweet:
+    type: "object"
+    required:
+    - "tweet_msg"
+    properties:
+      tweet_msg:
+        type: "string"
+        
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
