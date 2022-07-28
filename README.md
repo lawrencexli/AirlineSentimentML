@@ -11,6 +11,7 @@ Email: lawrence.lixiaohua@gmail.com
 
 Go to `server` folder and run command `uvicorn main:app`
 Server default starts on `127.0.0.1:8000` or `localhost:8000` on `GET`
+
 For `POST`, go to `127.0.0.1:8000/analysis` or `localhost:8000/analysis`
 
 ## Run train or predict test
